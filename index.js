@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { token } = require('./data/config.json');
+const { token } = require('./config.json');
 const { laadMuziek } = require('./modules/muziek')
 
 const { Client, Intents, Collection } = require("discord.js");

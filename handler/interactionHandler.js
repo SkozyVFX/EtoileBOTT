@@ -1,6 +1,6 @@
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
-const { clientId, serverId, token } = require('../data/config.json')
+const { clientId, serverId, token } = require('../config.json')
 
 module.exports = async (err, files, client) => {
   if (err) return console.error(err);
