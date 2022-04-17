@@ -6,7 +6,7 @@ module.exports = {
         .setName('ban')
         .setDescription('Select a member and ban them (but not really).')
         .addUserOption(option => option.setName('gebruiker').setDescription('The member to ban').setRequired(true))
-        .addStringOption(option => option.setName('reden').setDescription('Reden van ban').setRequired(true)),
+        .addStringOption(option => option.setName('reden').setDescription('Reden van ban').setRequired(false)),
     async execute(interaction, client) {
 
         const user = interaction.options.getMember('gebruiker');
@@ -18,7 +18,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setTitle("**BANNED!**")
-            .setDescription(` ${user} is gekickt door ${interaction.user}`)
+            .setDescription(`**Reden**: ${reden}`)
             .setColor("#ff0000")
 
         const row = new MessageActionRow()
