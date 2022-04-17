@@ -25,12 +25,13 @@ module.exports = {
 		const embed = new MessageEmbed()
 		.setAuthor({ name: user.user.tag, iconURL: user.user.displayAvatarURL()})
 		.setThumbnail(user.user.displayAvatarURL())
+		.setColor("#ff0000")
 		.addFields(
 			{ name: 'Naam', value: user.user.username, inline: true},
 			{ name: 'Tag', value: user.user.tag, inline: true},
 			{ name: 'ID', value: user.user.id, inline: true},
 			{ name: 'Account gemaakt op', value: gemaaktOp, inline: true},
-			{ name: 'Server gejoined op', value: gejoinedOp, inline: true},
+			{ name: 'Server gejoinned', value: gejoinedOp, inline: true},
 			{ name: 'Rollen', value: `${rollenTekst}`, inline: true},
 		)
 

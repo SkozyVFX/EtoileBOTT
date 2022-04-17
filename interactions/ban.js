@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
+const { MessageEmbed, MessageActionRow, MessageButton, ButtonInteraction } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -28,10 +28,6 @@ module.exports = {
                     .setLabel('Unban')
                     .setStyle('DANGER'),
             );
-            const userId = interaction.options.getString('id');
-            interaction.guild.members.unban(userId)
-
-
 
         interaction.reply({ embeds: [embed], components: [row] });
     },
