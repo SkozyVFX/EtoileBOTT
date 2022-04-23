@@ -7,6 +7,9 @@ const { Client, Intents, Collection } = require("discord.js");
 const allIntents = new Intents(32767);
 const client = new Client({ intents: allIntents });
 
+console.log(client.user);
+// client.user.setActivity('JOUW KANKER MOEDER', { type: 'PLAYING'});
+
 client.commands = new Collection();
 client.aliases = new Collection();
 client.interactions = new Collection();
